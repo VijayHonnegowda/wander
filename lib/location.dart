@@ -1,20 +1,7 @@
-import 'package:geolocator/geolocator.dart';
 import 'package:wander/constants/app_exports.dart';
 
-class LocationServices extends StatefulWidget {
+class LocationServices extends StatelessWidget {
   const LocationServices({super.key});
-
-  @override
-  State<LocationServices> createState() => _LocationServicesState();
-}
-
-class _LocationServicesState extends State<LocationServices> {
-
-
-  void getCurrentLocation()async{
-    Position position = await Geolocator.getCurrentPosition();
-    print(position);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +10,46 @@ class _LocationServicesState extends State<LocationServices> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(height: 32),
-          const Icon(
-            Icons.location_on,
-            size: 46,
-            color: Colors.black,
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            "Get user location",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 32),
           ElevatedButton(
             onPressed: () {
-              getCurrentLocation();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppCurrentLocation()));
             },
             child: const Text("Get current location"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MapLocation()));
+            },
+            child: const Text("Google Map"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GooglePlacesApiScreen()));
+            },
+            child: const Text("Google Places API"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CustomMarkerInfo()));
+            },
+            child: const Text("Custom marker list"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PolyGoneScreen()));
+            },
+            child: const Text("Polygone screen"),
           ),
         ],
       ),
