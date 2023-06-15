@@ -60,6 +60,15 @@ class LocationServices extends StatelessWidget {
             },
             child: const Text("Polyline screen"),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NetworkImageMarkerScreen()));
+            },
+            child: const Text("Network images screen"),
+          ),
         ],
       ),
     );

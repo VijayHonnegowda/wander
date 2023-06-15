@@ -13,15 +13,15 @@ class _PolylineScreenState extends State<PolylineScreen> {
   Completer<GoogleMapController> _controller = Completer();
 
   CameraPosition _kGooglePlex =
-      CameraPosition(target: LatLng(12.984121, 77.515016), zoom: 14);
+      const CameraPosition(target: LatLng(12.984121, 77.515016), zoom: 14);
 
   final Set<Marker> _marker = {};
   final Set<Polyline> _polyline = {};
 
   List<LatLng> latlng = [
-    LatLng(12.984121, 77.515016),
-    LatLng(13.014652, 77.670264),
-    LatLng(12.941089, 77.667985),
+    const LatLng(12.984121, 77.515016),
+    const LatLng(13.014652, 77.670264),
+    const LatLng(12.941089, 77.667985),
   ];
 
   @override

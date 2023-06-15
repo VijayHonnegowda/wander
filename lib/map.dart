@@ -12,32 +12,32 @@ class MapLocation extends StatefulWidget {
 class _MapLocationState extends State<MapLocation> {
   Completer<GoogleMapController> _controller = Completer();
   static final CameraPosition kGooglePlex =
-      CameraPosition(target: LatLng(12.9043423, 77.5581816), zoom: 14);
+      const CameraPosition(target: LatLng(12.9043423, 77.5581816), zoom: 14);
 
   List<Marker> marker = [];
   List<Marker> list = [
-    Marker(
+    const Marker(
       markerId: MarkerId("1"),
       position: LatLng(12.90434, 77.55818),
       infoWindow: InfoWindow(
         title: "My current location",
       ),
     ),
-    Marker(
+    const Marker(
       markerId: MarkerId("2"),
       position: LatLng(12.904, 77.558),
       infoWindow: InfoWindow(
         title: "My home",
       ),
     ),
-    Marker(
+    const Marker(
       markerId: MarkerId("3"),
       position: LatLng(12.90, 77.55),
       infoWindow: InfoWindow(
         title: "F1",
       ),
     ),
-    Marker(
+    const Marker(
       markerId: MarkerId("4"),
       position: LatLng(12.9, 77.8),
       infoWindow: InfoWindow(
@@ -50,7 +50,7 @@ class _MapLocationState extends State<MapLocation> {
     GoogleMapController controller = await _controller.future;
     controller.animateCamera(
       CameraUpdate.newCameraPosition(
-        CameraPosition(target: LatLng(12.2958, 76.6394), zoom: 14),
+        const CameraPosition(target: LatLng(12.2958, 76.6394), zoom: 14),
       ),
     );
     getUserCurrentLocation().then((value) async {
@@ -59,9 +59,9 @@ class _MapLocationState extends State<MapLocation> {
 
       marker.add(
         Marker(
-          markerId: MarkerId("2"),
+          markerId: const MarkerId("2"),
           position: LatLng(value.latitude, value.longitude),
-          infoWindow: InfoWindow(title: "My currnet location"),
+          infoWindow: const InfoWindow(title: "My currnet location"),
         ),
       );
     });
@@ -99,12 +99,12 @@ class _MapLocationState extends State<MapLocation> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.location_disabled_outlined),
+        child: const Icon(Icons.location_disabled_outlined),
         onPressed: () async {
           GoogleMapController controller = await _controller.future;
           controller.animateCamera(
             CameraUpdate.newCameraPosition(
-              CameraPosition(target: LatLng(12.2958, 76.6394), zoom: 14),
+              const CameraPosition(target: LatLng(12.2958, 76.6394), zoom: 14),
             ),
           );
           getUserCurrentLocation().then((value) async {
@@ -113,9 +113,9 @@ class _MapLocationState extends State<MapLocation> {
 
             marker.add(
               Marker(
-                markerId: MarkerId("2"),
+                markerId: const MarkerId("2"),
                 position: LatLng(value.latitude, value.longitude),
-                infoWindow: InfoWindow(title: "My currnet location"),
+                infoWindow: const InfoWindow(title: "My currnet location"),
               ),
             );
           });

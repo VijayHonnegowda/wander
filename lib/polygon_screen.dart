@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'dart:collection';
 import 'package:wander/constants/app_exports.dart';
 
 class PolyGonScreen extends StatefulWidget {
@@ -13,7 +11,7 @@ class _PolyGonScreenState extends State<PolyGonScreen> {
   Completer<GoogleMapController> _controller = Completer();
 
   CameraPosition _kGooglePlex =
-      CameraPosition(target: LatLng(12.909858, 77.480121), zoom: 14);
+      const CameraPosition(target: LatLng(12.909858, 77.480121), zoom: 14);
 
   final Set<Marker> _marker = {};
   final Set<Polygon> _polygon = HashSet<Polygon>();
@@ -33,11 +31,11 @@ class _PolyGonScreenState extends State<PolyGonScreen> {
   }
 
   List<LatLng> points = [
-    LatLng(12.909858, 77.480121),
-    LatLng(12.935887, 77.583382),
-    LatLng(12.984121, 77.515016),
-    LatLng(13.014652, 77.670264),
-    LatLng(12.941089, 77.667985),
+    const LatLng(12.909858, 77.480121),
+    const LatLng(12.935887, 77.583382),
+    const LatLng(12.984121, 77.515016),
+    const LatLng(13.014652, 77.670264),
+    const LatLng(12.941089, 77.667985),
   ];
 
   @override

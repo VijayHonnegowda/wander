@@ -2,7 +2,7 @@ import 'package:custom_info_window/custom_info_window.dart';
 import 'package:wander/constants/app_exports.dart';
 
 class CustomMarkerInfo extends StatefulWidget {
-  CustomMarkerInfo({super.key});
+  const CustomMarkerInfo({super.key});
 
   @override
   State<CustomMarkerInfo> createState() => _CustomMarkerInfoState();
@@ -13,11 +13,11 @@ class _CustomMarkerInfoState extends State<CustomMarkerInfo> {
 
   final List<Marker> _marker = <Marker>[];
   final List<LatLng> _latLang = [
-    LatLng(12.9797, 77.5912),
-    LatLng(12.9, 77.5),
-    LatLng(12.904, 77.558),
-    LatLng(12.90, 77.55),
-    LatLng(12.9, 77.8),
+    const LatLng(12.9797, 77.5912),
+    const LatLng(12.9, 77.5),
+    const LatLng(12.904, 77.558),
+    const LatLng(12.90, 77.55),
+    const LatLng(12.9, 77.8),
   ];
 
   @override
