@@ -6,6 +6,7 @@ export 'package:wander/home_screen.dart';
 export 'package:geocoding/geocoding.dart';
 export 'package:geolocator/geolocator.dart';
 export 'package:wander/polygon_screen.dart';
+export 'package:wander/polyline_screen.dart';
 export 'package:wander/current_location.dart';
 export 'package:wander/google_places_api.dart';
 export 'package:wander/custom_marker_info.dart';

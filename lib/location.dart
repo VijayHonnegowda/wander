@@ -51,6 +51,15 @@ class LocationServices extends StatelessWidget {
             },
             child: const Text("Polygon screen"),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PolylineScreen()));
+            },
+            child: const Text("Polyline screen"),
+          ),
         ],
       ),
     );
