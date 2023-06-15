@@ -28,32 +28,6 @@ class _CustomMarkerInfoState extends State<CustomMarkerInfo> {
 
   loadData() {
     for (int i = 0; i < _latLang.length; i++) {
-      if(i%2 == 0){
-        _marker.add(
-          Marker(
-            markerId: MarkerId(i.toString()),
-            icon: BitmapDescriptor.defaultMarker,
-            position: _latLang[i],
-            onTap: () {
-              windowController.addInfoWindow!(
-                Container(
-                  height: 300,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: const Center(
-                    child: CircleAvatar(radius: 30, backgroundColor: Colors.blue,),
-                  )
-                ),
-                _latLang[i],
-              );
-            },
-          ),
-        );
-      }else{
         _marker.add(
           Marker(
             markerId: MarkerId(i.toString()),
@@ -125,7 +99,7 @@ class _CustomMarkerInfoState extends State<CustomMarkerInfo> {
             },
           ),
         );
-      }
+
 
       setState(() {});
     }
