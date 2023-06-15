@@ -47,9 +47,9 @@ class LocationServices extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const PolyGoneScreen()));
+                      builder: (context) => const PolyGonScreen()));
             },
-            child: const Text("Polygone screen"),
+            child: const Text("Polygon screen"),
           ),
         ],
       ),
