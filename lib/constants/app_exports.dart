@@ -14,3 +14,4 @@ export 'package:wander/google_places_api.dart';
 export 'package:wander/custom_marker_info.dart';
 export 'package:wander/network_image_marker.dart';
 export 'package:google_maps_flutter/google_maps_flutter.dart';
+export 'package:wander/features/authentication/view/login.dart';

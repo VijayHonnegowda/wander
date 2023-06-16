@@ -1,18 +1,22 @@
 // import 'package:wander/constants/app_exports.dart';
 //
 // class Routes {
-//   static const String appCurrentLocation = "/appCurrentLocation";
+//   static const String login = "/login";
+//   static const String homeScreen = "/homeScreen";
 // }
 //
 // class NavigationServices {
-//   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+//   static final GlobalKey<NavigatorState> navigatorKey =
+//       GlobalKey<NavigatorState>();
 //
 //   static BuildContext get context => navigatorKey.currentContext!;
 //
 //   static Route<dynamic> generateRoute(RouteSettings settings) {
 //     switch (settings.name) {
-//       case Routes.appCurrentLocation:
-//         return MaterialPageRoute(builder: (_) => const AppCurrentLocation());
+//       case Routes.login:
+//         return MaterialPageRoute(builder: (_) => const Login());
+//       case Routes.homeScreen:
+//         return MaterialPageRoute(builder: (_) => const HomeScreen());
 //       default:
 //         return MaterialPageRoute(
 //           builder: (_) => Scaffold(
