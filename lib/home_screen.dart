@@ -12,9 +12,23 @@ class HomeScreen extends StatelessWidget {
         title: const Text("Wander"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-        ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomRight,
+            stops: [
+              0.1,
+              1.5,
+            ],
+            colors: [Colors.purple, Colors.greenAccent],
+          ),
+        ),
+        child: Column(
+          children: [
+
+          ],
+        ),
       ),
     );
   }

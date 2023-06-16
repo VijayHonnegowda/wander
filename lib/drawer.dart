@@ -10,6 +10,9 @@ class DrawerOption extends StatelessWidget {
       child: ListView(
         children: [
           const UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.white
+            ),
             currentAccountPicture: CircleAvatar(
               child: Image(
                 image: NetworkImage(
