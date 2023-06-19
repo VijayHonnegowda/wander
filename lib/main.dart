@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const Login(),
       theme: ThemeData(
-       primaryColor: Colors.lightGreen.shade200,
+        primaryColor: Colors.lightGreen.shade200,
+        appBarTheme: AppBarTheme(
+          color: Colors.lightGreen.shade200,
+          centerTitle: true,
+        ),
       ),
     );
   }

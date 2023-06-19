@@ -30,12 +30,32 @@ class DrawerOption extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
+            title: const Text("Current location"),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppCurrentLocation()));
+            },
+          ),
+          const Divider(),
+          ListTile(
             title: const Text("Location"),
             onTap: (){
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const LocationServices()));
+            },
+          ),
+          const Divider(),
+          ListTile(
+            title: const Text("Network Place Selection"),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NetworkImageMarkerScreen()));
             },
           ),
           const Divider(),

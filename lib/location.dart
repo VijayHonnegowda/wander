@@ -19,15 +19,6 @@ class LocationServices extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const AppCurrentLocation()));
-              },
-              child: const Text("Get current location"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
                         builder: (context) => const MapLocation()));
               },
               child: const Text("Google Map"),

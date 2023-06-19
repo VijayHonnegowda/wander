@@ -78,20 +78,15 @@ class _NetworkImageMarkerScreenState extends State<NetworkImageMarkerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Network image Screen"),
-      ),
-      body: GoogleMap(
-        initialCameraPosition: _kGooglePlex,
-        mapType: MapType.normal,
-        myLocationEnabled: true,
-        myLocationButtonEnabled: false,
-        markers: Set<Marker>.of(_marker),
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
-        },
-      ),
+    return GoogleMap(
+      initialCameraPosition: _kGooglePlex,
+      mapType: MapType.normal,
+      myLocationEnabled: true,
+      myLocationButtonEnabled: false,
+      markers: Set<Marker>.of(_marker),
+      onMapCreated: (GoogleMapController controller) {
+        _controller.complete(controller);
+      },
     );
   }
 }

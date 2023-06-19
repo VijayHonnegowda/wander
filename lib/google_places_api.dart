@@ -9,7 +9,6 @@ class GooglePlacesApiScreen extends StatefulWidget {
 }
 
 class _GooglePlacesApiScreenState extends State<GooglePlacesApiScreen> {
-  // String googleApiKey = "AIzaSyBcgsqJ9BMHSLZheEeB4-A9V9du4fEaKgo" ;
 
   void showGoogleAutoComplete() async {
    const kGoogleApiKey = "AIzaSyBcgsqJ9BMHSLZheEeB4-A9V9du4fEaKgo";
